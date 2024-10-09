@@ -24,7 +24,6 @@ pipeline {
     stages {
  
         stage('Verify Subscriber Count and Pattern') {
-            when { expression { env.GIT_BRANCH == env.PRIMARY_BRANCH } }
             steps {
                 script {
                     verify_subscriber()
@@ -33,7 +32,6 @@ pipeline {
         }
  
         stage('Get Artifact') {
-            when { expression { env.GIT_BRANCH == env.PRIMARY_BRANCH } }            
             steps {
                 script {
                     try {
@@ -46,7 +44,6 @@ pipeline {
         }
  
         stage('Validate Hash') {
-            when { expression { env.GIT_BRANCH == env.PRIMARY_BRANCH } }
             steps {
                 script {
                     try {
@@ -60,7 +57,6 @@ pipeline {
  
  
         stage('Upload Artifact') {
-            when { expression { env.GIT_BRANCH == env.PRIMARY_BRANCH } }
             steps {
                 script {
                     try {
@@ -73,7 +69,6 @@ pipeline {
         }
  
         stage('Update Manifest') {
-            when { expression { env.GIT_BRANCH == env.PRIMARY_BRANCH } }
             steps {
                 script {
                     try {
