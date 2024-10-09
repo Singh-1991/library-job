@@ -10,7 +10,7 @@ pipeline {
    
     environment {
         MNEMONIC                       = ''
-        PRIMARY_BRANCH                 = 'main'
+        PRIMARY_BRANCH                 = "main"
         MODULE                         = ''
         GROUP                          = ''
         ARTIFACTORY_CRED_ID            = ''
