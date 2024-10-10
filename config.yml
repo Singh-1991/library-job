@@ -1,0 +1,13 @@
+config_version: "1.0.0"
+project: "Singh Project"
+description: "Singh Project development"
+ 
+artifact_path: "s3://pnc-trial/diff_val_sm_name.tar"
+ 
+artifactory:
+  credential_id: ""
+  url: ""
+  upload_path: ""
+ 
+subscriber_repos:
+  - 'ssh://XXX@XXX.XXXXXX.XXX/XXX/XXX/XXX-XXXX-XXXXX.git'
